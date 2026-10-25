@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voiceover-edit"
+version = "0.1.0"
+description = "Talking-head video editing pipeline: silence removal, ASR subtitles, HDR tone-mapping, single-pass rendering."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{name = "limpidwei"}]
+keywords = ["video", "editing", "subtitles", "asr", "faster-whisper", "ffmpeg"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Multimedia :: Video",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy>=1.24",
+    "opencc-python-reimplemented>=0.1.7",
+]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.0"]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+voiceover-edit = "voiceover_edit.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/voiceover_edit"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

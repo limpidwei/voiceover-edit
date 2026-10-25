@@ -1,0 +1,17 @@
+# Default render preset
+[render]
+crf = 17
+preset = "slow"
+tonemap = "hable"
+
+[subtitle]
+max_line_width = 12
+max_lines = 2
+font = "Noto Sans CJK SC"
+font_size = 14
+margin_v = 35
+
+[silence]
+noise = "-35dB"
+min_duration = 0.45
+pad = 0.18

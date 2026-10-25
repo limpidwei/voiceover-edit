@@ -1,0 +1,32 @@
+# Local configuration — copy to config.toml and adjust.
+
+[models]
+# Path to the faster-whisper model directory.
+# Leave empty to require --model on every ASR command.
+default = ""
+
+[ffmpeg]
+# Directory containing ffmpeg and ffprobe binaries.
+# Leave empty to discover from PATH.
+bin_dir = ""
+
+[render]
+crf = 17
+preset = "slow"
+fps = 30
+
+[render.audio]
+bitrate = "160k"
+sample_rate = 44100
+channels = 2
+
+[subtitle]
+max_display_width = 12
+max_lines = 2
+font = "Microsoft YaHei"
+font_size = 15
+
+[silence]
+noise = "-35dB"
+min_duration = 0.45
+pad = 0.18

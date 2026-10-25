@@ -1,0 +1,42 @@
+# Models, caches, media
+*.bin
+*.pt
+*.onnx
+*.wav
+*.mp4
+*.mov
+*.mkv
+*.mp3
+*.aac
+*.srt
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Local config (not the example)
+config.toml
+
+# Temp
+_filter_complex*.txt
+*_encode.log
+*_progress.log
+*_probe.json
+*_verify*.json
