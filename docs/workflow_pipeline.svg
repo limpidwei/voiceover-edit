@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="Segoe UI,Microsoft YaHei,sans-serif">
+<defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker></defs>
+<rect width="1100" height="750" fill="#fafafa" rx="8"/>
+<text x="550" y="45" text-anchor="middle" font-size="24" fill="#1a1a2e" font-weight="bold">voiceover-edit 工作流管线</text>
+<text x="550" y="70" text-anchor="middle" font-size="14" fill="#777" font-weight="normal">从素材到可发布成品的完整工作流</text>
+<text x="130" y="95" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">① 理解素材</text>
+<text x="630" y="255" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">② 生成成片</text>
+<text x="630" y="415" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">③ 验证交付</text>
+<rect x="30" y="110" width="200" height="80" rx="12" fill="#4361ee"/>
+<text x="130" y="145" text-anchor="middle" font-size="15" fill="white" font-weight="bold">素材探测</text>
+<text x="130" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">probe</text>
+<rect x="280" y="110" width="200" height="80" rx="12" fill="#3a0ca3"/>
+<text x="380" y="145" text-anchor="middle" font-size="15" fill="white" font-weight="bold">静音检测</text>
+<text x="380" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">silence</text>
+<rect x="530" y="110" width="200" height="80" rx="12" fill="#7209b7"/>
+<text x="630" y="145" text-anchor="middle" font-size="15" fill="white" font-weight="bold">语音识别</text>
+<text x="630" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">asr</text>
+<rect x="780" y="110" width="200" height="80" rx="12" fill="#f72585"/>
+<text x="880" y="145" text-anchor="middle" font-size="15" fill="white" font-weight="bold">剪辑计划</text>
+<text x="880" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">plan</text>
+<rect x="30" y="270" width="200" height="80" rx="12" fill="#4cc9f0"/>
+<text x="130" y="305" text-anchor="middle" font-size="15" fill="white" font-weight="bold">字幕生成</text>
+<text x="130" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">subtitle + remap</text>
+<rect x="280" y="270" width="200" height="80" rx="12" fill="#e76f51"/>
+<text x="380" y="305" text-anchor="middle" font-size="15" fill="white" font-weight="bold">HDR 色彩映射</text>
+<text x="380" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">color (tonemap)</text>
+<rect x="530" y="270" width="200" height="80" rx="12" fill="#06d6a0"/>
+<text x="630" y="305" text-anchor="middle" font-size="15" fill="white" font-weight="bold">单代渲染</text>
+<text x="630" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">render</text>
+<rect x="780" y="270" width="200" height="80" rx="12" fill="#ffd166"/>
+<text x="880" y="305" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">质量检查</text>
+<text x="880" y="329" text-anchor="middle" font-size="12" fill="#555" font-weight="normal">qc</text>
+<rect x="30" y="430" width="200" height="80" rx="12" fill="#118ab2"/>
+<text x="130" y="465" text-anchor="middle" font-size="15" fill="white" font-weight="bold">封面制作</text>
+<text x="130" y="489" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">cover</text>
+<rect x="280" y="430" width="200" height="80" rx="12" fill="#ef476f"/>
+<text x="380" y="465" text-anchor="middle" font-size="15" fill="white" font-weight="bold">字幕回归验证</text>
+<text x="380" y="489" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">verify</text>
+<rect x="530" y="430" width="200" height="80" rx="12" fill="#fca311"/>
+<text x="630" y="465" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">结构检查</text>
+<text x="630" y="489" text-anchor="middle" font-size="12" fill="#555" font-weight="normal">struct-check</text>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="230" y1="150" x2="278" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="480" y1="150" x2="528" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="730" y1="150" x2="778" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 880 190 Q 880 230 550 230 Q 220 230 130 268"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="230" y1="310" x2="278" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="480" y1="310" x2="528" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="730" y1="310" x2="778" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 850 350 Q 850 390 600 390 Q 480 390 430 428"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 900 350 Q 900 400 750 400 Q 680 400 660 428"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 580 350 Q 400 390 180 428" stroke-dasharray="6,4"/></g>
+<path d="M 380 510 Q 380 560 200 560 Q 50 560 50 350 Q 50 230 80 192" stroke="#ef476f" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="8,4"/>
+<text x="92" y="585" text-anchor="middle" font-size="12" fill="#ef476f" font-weight="normal">验证不通过 → 回到对应阶段修复</text>
+<rect x="780" y="430" width="260" height="80" rx="12" fill="white" stroke="#06d6a0" stroke-width="2.5"/>
+<text x="910" y="458" text-anchor="middle" font-size="14" fill="#059669" font-weight="bold">交付物</text>
+<text x="910" y="480" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">成片 MP4 + SRT 字幕 + 封面</text>
+<text x="910" y="498" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">自动检查通过后，再由人工观看验收</text>
+<line x1="730" y1="470" x2="778" y2="470" stroke="#06d6a0" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 480 500 Q 510 540 570 550 L 780 550 Q 850 550 850 512" stroke="#06d6a0" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="80" y="610" width="940" height="55" rx="10" fill="#f0f0f0" stroke="#ddd"/>
+<text x="550" y="633" text-anchor="middle" font-size="13" fill="#444" font-weight="bold">核心原则</text>
+<text x="550" y="654" text-anchor="middle" font-size="12" fill="#666" font-weight="normal">音频能量定切点 · 显示宽度定断行 · 整数毫秒定时间 · 自动检查与人工验收分层</text>
+<rect x="80" y="680" width="940" height="25" rx="4" fill="#e8e8e8"/>
+<text x="550" y="698" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">12+ 真实项目复盘 → 17 个陷阱 → 11 项核心修复 → 自动化回归测试</text>
+</svg>

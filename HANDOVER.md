@@ -9,10 +9,10 @@ Extracted from the `voiceover-video-edit` Claude skill after 12+ real production
 
 ## Repository
 
-- Location: `voiceover-edit/`
+- Repository root: `voiceover-edit/`
 - Package: `src/voiceover_edit/` (hatchling build, `pip install -e .`)
 - CLI: `voiceover-edit <subcommand>`
-- Tests: `run_tests.py` (36+ checks, no external dependencies)
+- Tests: `run_tests.py` (51 checks, no external dependencies)
 - License: MIT
 
 ## Key decisions
@@ -54,13 +54,11 @@ This package handles all computation.
 
 ## Model status
 
-- Only `fw-large-v3-turbo` survives at `***REMOVED***`
-- `medium` and `small` models deleted — all references updated
-- ASR requires `--model` flag (no silent download)
+- Tested with a local faster-whisper large-v3-turbo model directory
+- ASR requires `--model` (no silent download); other compatible model directories can be supplied
 
 ## Not yet done (P1 backlog)
 
-- GitHub push (awaiting user authorization)
 - Cross-platform testing (macOS/Linux)
 - VFR, multi-audio-track, AV1/VP9 input testing
 - GPU acceleration support

@@ -17,7 +17,7 @@ def _cache_key(video_path, model_path, prompt="", language="zh"):
 def _cache_path(video_path, model_path, prompt="", language="zh"):
     cache_dir = Path(video_path).parent / ".voiceover_cache"
     cache_dir.mkdir(exist_ok=True)
-    return cache_dir / f"verify_{_cache_key(video_path, model_path)}.json"
+    return cache_dir / f"verify_{_cache_key(video_path, model_path, prompt, language)}.json"
 
 
 def verify_srt(video_path, srt_path, model_path, prompt="", language="zh"):
@@ -45,7 +45,7 @@ def verify_srt(video_path, srt_path, model_path, prompt="", language="zh"):
             for w in seg.words:
                 text = w.word.strip()
                 if text:
-                    asr_words.append({"s": round(w.start, 3), "e": round(w.end, 3), "w": text})
+                    asr_words.append({"start": round(w.start, 3), "end": round(w.end, 3), "word": text})
         cache.write_text(json.dumps(asr_words, ensure_ascii=False), encoding="utf-8")
 
     cues = read_srt(srt_path)

@@ -80,6 +80,25 @@ check("1080p", profile_level(1920,1080) == ("main","4.0"))
 check("4k", profile_level(3840,2160) == ("high","5.1"))
 check("no hdr", is_hdr({"streams":[]}) is None)
 
+print("=== verify ===")
+import json
+import tempfile
+from pathlib import Path
+from voiceover_edit.verify import _cache_path, verify_srt
+from voiceover_edit.utils.srt import SrtEntry, write_srt
+with tempfile.TemporaryDirectory() as temp_dir:
+    video = Path(temp_dir) / "video.mp4"
+    video.write_bytes(b"video")
+    base = _cache_path(video, "model", "prompt", "zh")
+    check("verify cache prompt", base != _cache_path(video, "model", "other", "zh"))
+    check("verify cache language", base != _cache_path(video, "model", "prompt", "en"))
+    check("verify cache stable", base == _cache_path(video, "model", "prompt", "zh"))
+    base.write_text(json.dumps([{"start": 0.0, "end": 1.0, "word": "你好"}]), encoding="utf-8")
+    srt_path = Path(temp_dir) / "subs.srt"
+    write_srt([SrtEntry(1, 0.0, 1.0, "你好")], srt_path)
+    score, _ = verify_srt(video, srt_path, "model", prompt="prompt")
+    check("verify cached words", score == 1.0)
+
 print("=== imports ===")
 try:
     from voiceover_edit import probe, silence, plan, subtitle, render, qc, verify, struct_check, cover, color
@@ -91,8 +110,11 @@ except Exception as exc:
 
 print("=== cli dispatch ===")
 from voiceover_edit.__main__ import main
-rc = main(["--help"])
-check("cli help", rc is None or rc == 0)
+try:
+    main(["--help"])
+    check("cli help", True)
+except SystemExit as exc:
+    check("cli help", exc.code == 0)
 for cmd in ["silence", "asr", "subtitle", "render", "qc", "probe", "verify", "struct-check", "cover"]:
     try:
         main([cmd, "--help"])
