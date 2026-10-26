@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="Segoe UI,Microsoft YaHei,sans-serif">
+<defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker></defs>
+<rect width="1100" height="750" fill="#fafafa" rx="8"/>
+<text x="550" y="45" text-anchor="middle" font-size="24" fill="#1a1a2e" font-weight="bold">voiceover-edit Pipeline</text>
+<text x="550" y="70" text-anchor="middle" font-size="14" fill="#777" font-weight="normal">From raw footage to publishable deliverables</text>
+<text x="130" y="95" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">1. Understand inputs</text>
+<text x="630" y="255" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">2. Build the video</text>
+<text x="550" y="415" text-anchor="middle" font-size="12" fill="#777" font-weight="normal">3. Verify and deliver</text>
+<rect x="30" y="110" width="200" height="80" rx="12" fill="#4361ee"/>
+<text x="130" y="145" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Probe media</text>
+<text x="130" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">probe</text>
+<rect x="280" y="110" width="200" height="80" rx="12" fill="#3a0ca3"/>
+<text x="380" y="145" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Detect silences</text>
+<text x="380" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">silence</text>
+<rect x="530" y="110" width="200" height="80" rx="12" fill="#7209b7"/>
+<text x="630" y="145" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Transcribe speech</text>
+<text x="630" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">asr</text>
+<rect x="780" y="110" width="200" height="80" rx="12" fill="#f72585"/>
+<text x="880" y="145" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Build edit plan</text>
+<text x="880" y="169" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">plan</text>
+<rect x="30" y="270" width="200" height="80" rx="12" fill="#4cc9f0"/>
+<text x="130" y="305" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Generate subtitles</text>
+<text x="130" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">subtitle + remap</text>
+<rect x="280" y="270" width="200" height="80" rx="12" fill="#e76f51"/>
+<text x="380" y="305" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Map HDR color</text>
+<text x="380" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">color (tonemap)</text>
+<rect x="530" y="270" width="200" height="80" rx="12" fill="#06d6a0"/>
+<text x="630" y="305" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Render once</text>
+<text x="630" y="329" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">render</text>
+<rect x="780" y="270" width="200" height="80" rx="12" fill="#ffd166"/>
+<text x="880" y="305" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Check quality</text>
+<text x="880" y="329" text-anchor="middle" font-size="12" fill="#555" font-weight="normal">qc</text>
+<rect x="30" y="430" width="200" height="80" rx="12" fill="#118ab2"/>
+<text x="130" y="465" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Extract cover</text>
+<text x="130" y="489" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">cover</text>
+<rect x="280" y="430" width="200" height="80" rx="12" fill="#ef476f"/>
+<text x="380" y="465" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Verify subtitles</text>
+<text x="380" y="489" text-anchor="middle" font-size="12" fill="#ffffffdd" font-weight="normal">verify</text>
+<rect x="530" y="430" width="200" height="80" rx="12" fill="#fca311"/>
+<text x="630" y="465" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Check structure</text>
+<text x="630" y="489" text-anchor="middle" font-size="12" fill="#555" font-weight="normal">struct-check</text>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="230" y1="150" x2="278" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="480" y1="150" x2="528" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="730" y1="150" x2="778" y2="150"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 880 190 Q 880 230 550 230 Q 220 230 130 268"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="230" y1="310" x2="278" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="480" y1="310" x2="528" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><line x1="730" y1="310" x2="778" y2="310"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 850 350 Q 850 390 600 390 Q 480 390 430 428"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 900 350 Q 900 400 750 400 Q 680 400 660 428"/></g>
+<g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M 580 350 Q 400 390 180 428" stroke-dasharray="6,4"/></g>
+<path d="M 380 510 Q 380 560 200 560 Q 50 560 50 350 Q 50 230 80 192" stroke="#ef476f" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="8,4"/>
+<text x="310" y="585" text-anchor="middle" font-size="12" fill="#ef476f" font-weight="normal">Failed checks → return to the relevant stage</text>
+<rect x="780" y="430" width="260" height="80" rx="12" fill="white" stroke="#06d6a0" stroke-width="2.5"/>
+<text x="910" y="458" text-anchor="middle" font-size="14" fill="#059669" font-weight="bold">Deliverables</text>
+<text x="910" y="480" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">Video MP4 + SRT subtitles + cover</text>
+<text x="910" y="498" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">Automated checks + human review</text>
+<line x1="730" y1="470" x2="778" y2="470" stroke="#06d6a0" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 480 500 Q 510 540 570 550 L 780 550 Q 850 550 850 512" stroke="#06d6a0" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="80" y="610" width="940" height="55" rx="10" fill="#f0f0f0" stroke="#ddd"/>
+<text x="550" y="633" text-anchor="middle" font-size="13" fill="#444" font-weight="bold">Core principles</text>
+<text x="550" y="654" text-anchor="middle" font-size="12" fill="#666" font-weight="normal">Cut by audio energy · Break lines by display width · Use integer milliseconds · Keep human review</text>
+<rect x="80" y="680" width="940" height="25" rx="4" fill="#e8e8e8"/>
+<text x="550" y="698" text-anchor="middle" font-size="11" fill="#555" font-weight="normal">12+ real projects → 17 pitfalls → 11 core fixes → Automated regression tests</text>
+</svg>
