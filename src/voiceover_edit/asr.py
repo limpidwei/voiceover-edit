@@ -40,9 +40,9 @@ def run_asr(args):
             if not text:
                 continue
             words.append({
-                "s": round(w.start, 3),
-                "e": round(w.end, 3),
-                "w": text,
+                "start": round(w.start, 3),
+                "end": round(w.end, 3),
+                "word": text,
             })
 
     out = {"duration": info.duration, "segments": [], "words": words}
@@ -54,7 +54,8 @@ def run_asr(args):
 
     if args.srt:
         from .utils.srt import SrtEntry, write_srt
-        entries = [SrtEntry(i + 1, w["start"], w["end"], w["word"]) for i, w in enumerate(words)]
+        entries = [SrtEntry(i + 1, w["start"], w["end"], w["word"])
+                  for i, w in enumerate(words)]
         write_srt(entries, args.srt)
         print(f"Raw SRT: {args.srt}")
 

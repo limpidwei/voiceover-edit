@@ -55,6 +55,7 @@ def main(argv=None):
     p = sub.add_parser("struct-check", help="Structural integrity check")
     p.add_argument("--plan", required=True)
     p.add_argument("--words", required=True)
+    p.add_argument("--raw-words", help="Original ASR words.json for coverage comparison")
     p.add_argument("--video", required=True)
     p.add_argument("--report", default="struct_report.json")
 

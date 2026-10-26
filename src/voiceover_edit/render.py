@@ -81,7 +81,7 @@ def run_render(args):
     ffmpeg = find_ffmpeg()
     ffprobe = find_ffprobe()
 
-    inputs_info = [probe_media(p, ffprobe) for p in ep.inputs]
+    inputs_info = [probe(p, ffprobe=ffprobe) for p in ep.inputs]
 
     first_w, first_h = resolution(inputs_info[0])
     if ep.scale:

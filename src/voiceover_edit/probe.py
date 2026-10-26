@@ -105,3 +105,29 @@ def profile_level(width, height):
     if pixels <= 1920 * 1080:
         return "main", "4.0"
     return "high", "5.1"
+
+
+def run_probe(args):
+    """CLI handler for 'voiceover-edit probe'."""
+    info = probe(args.input)
+    vs = video_stream(info)
+    hdr = is_hdr(info)
+    res = resolution(info)
+    ai = audio_stream_index(info)
+    dur = float(info.get("format", {}).get("duration", 0))
+    print(f"Duration: {dur:.2f}s")
+    if vs:
+        print(f"Video: {vs.get('codec_name')} {res[0]}x{res[1]} "
+              f"pix_fmt={vs.get('pix_fmt')} "
+              f"transfer={vs.get('color_transfer', 'n/a')}")
+        if hdr:
+            print(f"HDR: {hdr}")
+        pl = profile_level(res[0], res[1])
+        print(f"Recommended profile: {pl[0]}@{pl[1]}")
+    else:
+        print("No video stream")
+    if ai is not None:
+        print(f"Audio stream index: {ai}")
+    else:
+        print("No audio stream")
+    return 0

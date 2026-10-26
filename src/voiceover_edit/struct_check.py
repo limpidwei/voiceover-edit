@@ -58,7 +58,11 @@ def run_struct_check(args):
     words_data = WordsData.from_file(args.words)
 
     results = {}
-    results["coverage"] = check_word_coverage(words_data.words, words_data.words)
+    if args.raw_words:
+        raw_data = WordsData.from_file(args.raw_words)
+        results["coverage"] = check_word_coverage(words_data.words, raw_data.words)
+    else:
+        results["coverage"] = {"missing_chars": {}, "extra_chars": {}, "pass": True, "skipped": "no --raw-words provided"}
     results["overlap"] = check_overlap(words_data.words)
     results["cut_edge"] = check_cut_edge_energy(args.video, keep)
     results["pass"] = all(r.get("pass", True) for r in results.values())

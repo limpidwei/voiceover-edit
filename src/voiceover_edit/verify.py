@@ -7,14 +7,14 @@ from pathlib import Path
 from .utils.srt import read_srt
 
 
-def _cache_key(video_path, model_path):
-    """Build a cache key from video mtime + model path."""
+def _cache_key(video_path, model_path, prompt="", language="zh"):
+    """Build a cache key from video mtime + model + params."""
     stat = Path(video_path).stat()
-    raw = f"{video_path}:{stat.st_mtime}:{stat.st_size}:{model_path}"
+    raw = f"{video_path}:{stat.st_mtime}:{stat.st_size}:{model_path}:{prompt}:{language}"
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
-def _cache_path(video_path, model_path):
+def _cache_path(video_path, model_path, prompt="", language="zh"):
     cache_dir = Path(video_path).parent / ".voiceover_cache"
     cache_dir.mkdir(exist_ok=True)
     return cache_dir / f"verify_{_cache_key(video_path, model_path)}.json"
@@ -22,7 +22,7 @@ def _cache_path(video_path, model_path):
 
 def verify_srt(video_path, srt_path, model_path, prompt="", language="zh"):
     """Compare SRT cues against fresh ASR. Returns (score, details)."""
-    cache = _cache_path(video_path, model_path)
+    cache = _cache_path(video_path, model_path, prompt, language)
     if cache.exists():
         asr_words = json.loads(cache.read_text(encoding="utf-8"))
     else:

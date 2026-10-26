@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-from .probe import find_ffprobe, probe, video_stream, is_hdr
+from .probe import find_ffprobe, probe, video_stream
 from .utils.display_width import display_width
 from .utils.srt import read_srt
 
@@ -10,9 +10,9 @@ from .utils.srt import read_srt
 def run_qc(args):
     """CLI handler for 'voiceover-edit qc'."""
     ffprobe = find_ffprobe()
-    info = probe_media(args.video, ffprobe)
+    info = probe(args.video, ffprobe=ffprobe)
     v = video_stream(info)
-    a_list = audio_streams(info)
+    a_list = [s for s in info.get("streams", []) if s.get("codec_type") == "audio"]
     timeline = args.timeline
     issues = []
 
