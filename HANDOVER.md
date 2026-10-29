@@ -1,6 +1,6 @@
 # voiceover-edit HANDOVER
 
-Last updated: 2026-10-26
+Last updated: 2026-10-29
 
 ## What this is
 
@@ -14,6 +14,8 @@ Extracted from the `voiceover-video-edit` Claude skill after 12+ real production
 - CLI: `voiceover-edit <subcommand>`
 - Tests: `run_tests.py` (51 checks, no external dependencies)
 - License: MIT
+- Operational review: `docs/skill-operation-review.md`
+- Skill changes: `docs/skill-polish-changes.md`
 
 ## Key decisions
 
@@ -59,10 +61,13 @@ This package handles all computation.
 
 ## Not yet done (P1 backlog)
 
+- Real-world revalidation of the narrowed skill trigger in new sessions
+- Full 4K HLG render with visual, memory, and runtime review
+- iPhone playback verification for 4K output
+- Cover render acceptance using the shared HTML-to-PNG renderer
+- Per-cue subtitle timing verification (current verify is whole-video character coverage)
 - Cross-platform testing (macOS/Linux)
 - VFR, multi-audio-track, AV1/VP9 input testing
 - GPU acceleration support
 - Resumable ASR for long videos
 - Edit-aligned subtitle re-generation
-- SKILL.md trigger description cleanup (classifier blocked)
-- Original pitfalls.md npl=100→200 fix (classifier blocked, correct in package)
